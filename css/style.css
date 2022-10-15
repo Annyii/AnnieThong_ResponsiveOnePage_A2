@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
+html {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    --type-scaling-ratio: 1.25;
+    --large-font:  calc(2.3rem * var(--type-scaling-ratio));
+    --medium-font: calc(1.7rem * var(--type-scaling-ratio));
+    --small-font: calc(1.2rem * var(--type-scaling-ratio));
+    --body-font: calc(1rem * var(--type-scaling-ratio));
+}
+
+body {
+    margin: 0;
+}
+
+img {
+    max-width: 39.25rem;
+    min-height: 15rem;
+    padding: 10px;
+    box-shadow: 0 0 1.4rem;
+    background-color: rgb(209, 209, 209);
+    
+}
+
+img:hover {
+    color: rgb(155, 155, 155);
+    transition: .3s all ease;
+    transform: translate(0.2rem,0.1rem);
+}
+
+h2 {
+    background-color:rgba(0, 0, 0, 0.377);
+    width: 28rem;
+    font-size: 2.7rem;
+    color: white;
+}
+
+h3 {
+    margin: 0;
+    font-size: 3.8rem;
+    font-family: 'Poiret One', cursive;
+    color: white;
+    text-align:center;
+    align-self: center;
+}
+
+h4 {
+    color: white;
+    font-size: 1.4rem;
+}
+
+p {
+    color: white;
+    font-size: 1.2rem;
+    font-size:var(--body-font);
+}
+
+span {
+    font-size: 2rem;
+}
+
+
+nav ul {
+    list-style-type: none;  display: flex;
+    justify-content: right;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    margin: 10px 100px 0 0;
+    font-size: 1.4rem;
+    text-decoration: none; 
+    color:black;
+}
+
+nav ul li a:hover {
+    color: rgb(134, 130, 167);
+    transition: .2s all ease;
+}
+
+.menu-icon {
+    display:none;
+}
+
+
+#hero {
+    background-image: url('../images/brushstroke.jpg');
+    padding: 0;
+    box-shadow: none;
+    min-height: 25rem;
+    background-size:contain;
+    background-position: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+#hero img:hover {
+    transform: none;
+}
+
+.flex {
+    align-self: center;
+}
+
+
+.gabriel {
+    display: flex;
+    align-content: center;
+    justify-content: space-evenly;
+    background-color:darkgrey;
+    min-height: 40rem;
+}
+
+
+.gabriel p {
+    max-width: 38rem;
+}
+
+
+.olabukoo {
+    background-color:rgb(25, 12, 71);
+    min-height: 40rem;
+    display: flex;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+.olabukoo p {
+    max-width: 40rem;
+}
+
+
+.phonoforest {
+    background-color:darkgrey;
+    min-height: 40rem;
+    display: flex;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+.phonoforest p {
+    max-width: 48rem;
+} 
+
+
+.sledge {
+    background-color:rgb(25, 12, 71);
+    min-height: 40rem;
+    display: flex;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+.sledge p {
+    max-width: 52rem;
+}
+
+
+.grid {
+    display: grid;
+    padding: 8rem 0 10rem 0;
+    grid-gap: 4rem;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.grid img {
+    padding: 0;
+    width: 100%;
+    height: auto; 
+    align-self: center;
+}
+
+.grid-text h3 {
+    padding-top: 5rem;
+    text-align:center;
+    color: black;
+}
+
+
+@media only screen and (max-width: 64em){ /* small laptop < 1024px */
+    .grid {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    img {
+        width:100%;
+    }
+  }
+  @media only screen and (max-width: 48em){ /* tablet < 768px */
+    .grid {
+      grid-template-columns: 1fr 1fr;
+    }
+    img {
+        width:100%;
+    }
+    .gabriel {
+        display: block;
+    }
+    .olabukoo {
+        display: block;
+    }
+    .phonoforest {
+        display: block;
+    }
+    .sledge {
+        display: block;
+    }
+  }
+  @media only screen and (max-width: 30em){ /* mobile < 480px */
+    .menu-icon {
+        display: block;
+    }
+    nav {
+        height: 1.6rem;
+        overflow: hidden;
+        background-color:rgb(184, 184, 184);
+    }
+    .nav-expanded {
+        height: 6.8rem; 
+    }
+    nav li {
+        flex-basis: 100%;
+    }
+    #hero {
+      min-height:10rem;
+    }
+    .grid {
+      grid-template-columns: 1fr;
+    }
+    .gabriel {
+        display: block;
+    }
+    .olabukoo {
+        display: block;
+    }
+    .phonoforest {
+        display: block;
+    }
+    .sledge {
+        display: block;
+    }
+  }
